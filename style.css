@@ -19,6 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -48,6 +49,17 @@ body {
   color: var(--text-color);
 }
 
+.bi-list{
+  font-size: 3.6rem;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+}
+
+.header i.bi-list:hover {
+  color: var(--main-color);
+}
+
 .nav {
   display: flex;
 }
@@ -58,7 +70,9 @@ body {
   color: var(--text-color);
   transition: color 0.3s ease;
 }
-
+p{
+  text-align: justify;
+}
 .nav a:hover {
   color: var(--main-color);
 }
@@ -173,4 +187,97 @@ form button {
 form button:hover {
   background-color: #c02761;
   transition: transform 0.3s;
+}
+
+.about{
+  padding: 20%;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-right: 2rem;
+    margin-top: 10px;
+  }
+
+  .bi-list {
+    display: block;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-box {
+    margin-top: 0;
+  }
+}
+
+.nav-active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 120px; 
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+}
+
+.nav-active a {
+  color: var(--text-color);
+  padding: 15px;
+  text-align: center;
+}
+
+
+.about h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  transition: color 0.5s ease;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.open-modal-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  z-index: 1001;
+}
+
+.open-modal-btn i {
+  font-size: 2rem;
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.open-modal-btn i:hover {
+  background-color: #c02761;
 }

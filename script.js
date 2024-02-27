@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var signupModal = document.getElementById("signup-modal");
   var loginCloseBtn = document.getElementById("close-login");
   var signupCloseBtn = document.getElementById("close-signup");
+  var navIcon = document.querySelector('.bi-list');  // Add this line
+  var nav = document.querySelector('.nav');  // Add this line
   var highlightingEnabled = false; // Track whether highlighting is enabled
 
   openModalBtn.addEventListener("click", function () {
@@ -104,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelectorAll("p, h1, h2, h3, h4, h5, h6, a")
       .forEach(function (element) {
-        element.addEventListener("mouseenter", handleMouseEnter); // Add event listener using named function
-        element.addEventListener("mouseleave", handleMouseLeave); // Add event listener using named function
+        element.addEventListener("mouseenter", handleMouseEnter);
+        element.addEventListener("mouseleave", handleMouseLeave);
       });
   }
 
@@ -113,8 +115,19 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelectorAll("p, h1, h2, h3, h4, h5, h6, a")
       .forEach(function (element) {
-        element.removeEventListener("mouseenter", handleMouseEnter); // Remove event listener using named function
-        element.removeEventListener("mouseleave", handleMouseLeave); // Remove event listener using named function
+        element.removeEventListener("mouseenter", handleMouseEnter);
+        element.removeEventListener("mouseleave", handleMouseLeave);
       });
+  }
+
+  // Event listener for the menu icon
+  navIcon.addEventListener('click', function () {
+    nav.classList.toggle('nav-active');
+  });
+  
+  // Additional function to close the navigation when a link is clicked
+  function closeNav() {
+    var nav = document.querySelector('.nav');
+    nav.classList.remove('nav-active');
   }
 });
