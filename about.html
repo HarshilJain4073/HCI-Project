@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img
+          src="logo/logo_blind_ai.png"
+          alt="logo"
+          width="200 px"
+          height="50 px"
+      /></a>
+      <div class="icon"><i class="bi bi-list"></i></div>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="review.html">Review</a>
+      </nav>
+      <div class="btn-box">
+        <button class="btn login-btn">Login</button>
+        <button class="btn signup-btn">Sign Up</button>
+      </div>
+    </header>
+    <!-- 
+    <header class="header">
+      <a href="#" class="logo">AI</a>
+      <nav class="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#review">Review</a>
+      </nav>
+      <div class="btn-box">
+        <div class="dropdown">
+          <button class="btn dropdown-btn">
+            Menu <i class="bi bi-caret-down-fill"></i>
+          </button>
+          <div class="dropdown-content">
+            <button class="btn login-btn">Login</button>
+            <button class="btn signup-btn">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header> -->
+
+    <div class="modal" id="login-modal">
+      <div class="modal-content">
+        <span class="close" id="close-login">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+          <input type="text" placeholder="Username" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="signup-modal">
+      <div class="modal-content">
+        <span class="close" id="close-signup">&times;</span>
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+          <input type="text" placeholder="Username" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <button id="open-modal-btn" class="open-modal-btn">
+      <i class="bi bi-universal-access"></i>
+    </button>
+
+    <!-- about section design -->
+
+    <section id="about" class="about">
+      <h2 class="heading">About US</h2>
+      <p>
+        At the heart of our project lies a commitment to supporting individuals
+        facing mental health challenges. Our innovative solutions aim to provide
+        a helping hand on the journey to recovery, fostering understanding,
+        resilience, and connection. As advocates for inclusivity, our website is
+        meticulously crafted to be accessible to everyone, including those with
+        color vision deficiencies. We believe that everyone deserves access to
+        the resources and support they need, and our project strives to break
+        down barriers to mental health care. Explore our website to learn more
+        about our mission, the tools we offer, and how you can be a part of this
+        empowering movement. Together, we can make a positive impact on the
+        lives of those affected by mental health issues.
+      </p>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

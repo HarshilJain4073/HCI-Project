@@ -8,6 +8,23 @@
   background-color: yellow;
 }
 
+body {
+  font-family: sans-serif;
+  /* Add the background image */
+  background-image: url("logo/background.png"); /* Replace 'path_to_your_image.png' with the path to your image */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Keep the background image fixed while scrolling */
+  background-color: rgba(
+    255,
+    231,
+    193,
+    0.5
+  ); /* Set the background color with transparency */
+  color: var(--text-color);
+  position: relative;
+}
+
 .open-modal-btn {
   position: absolute;
   top: 1 rem;
@@ -28,6 +45,24 @@ body {
   color: var(--text-color);
   position: relative;
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Set the background color with transparency */
+  backdrop-filter: blur(10px); /* Add a blur effect to the background */
+  z-index: 1000;
+}
 
 .header {
   position: fixed;
@@ -38,7 +73,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
   z-index: 1000;
 }
 
@@ -49,7 +84,7 @@ body {
   color: var(--text-color);
 }
 
-.bi-list{
+.bi-list {
   font-size: 3.6rem;
   color: var(--text-color);
   cursor: pointer;
@@ -70,7 +105,7 @@ body {
   color: var(--text-color);
   transition: color 0.3s ease;
 }
-p{
+p {
   text-align: justify;
 }
 .nav a:hover {
@@ -189,7 +224,12 @@ form button:hover {
   transition: transform 0.3s;
 }
 
-.about{
+.about {
+  padding: 20%;
+  text-align: justify;
+}
+
+.review {
   padding: 20%;
   text-align: justify;
 }
@@ -234,7 +274,7 @@ form button:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 120px; 
+  top: 120px;
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
@@ -247,8 +287,13 @@ form button:hover {
   text-align: center;
 }
 
-
 .about h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  transition: color 0.5s ease;
+}
+
+.review {
   font-size: 3rem;
   margin-bottom: 2rem;
   transition: color 0.5s ease;
@@ -260,10 +305,16 @@ form button:hover {
   margin-bottom: 3rem;
 }
 
+.review {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
 .open-modal-btn {
   position: fixed;
   bottom: 20px;
-  right: 20px; 
+  right: 20px;
   z-index: 1001;
 }
 
