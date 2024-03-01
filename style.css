@@ -11,7 +11,7 @@
 body {
   font-family: sans-serif;
   /* Add the background image */
-  background-image: url("logo/background.png"); /* Replace 'path_to_your_image.png' with the path to your image */
+  background-image: url("background.png"); /* Replace 'path_to_your_image.png' with the path to your image */
   background-size: cover; /* Cover the entire viewport */
   background-repeat: no-repeat; /* Prevent image from repeating */
   background-attachment: fixed; /* Keep the background image fixed while scrolling */
