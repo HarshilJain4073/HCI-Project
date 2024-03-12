@@ -332,3 +332,70 @@ form button:hover {
 .open-modal-btn i:hover {
   background-color: #c02761;
 }
+
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+/* Main navigation links */
+.dropdown a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+/* Dropdown content for services */
+.services-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style for service links */
+.service a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: white;
+}
+
+/* Hover effect for service links */
+.service a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Positioning and display for sub-dropdowns */
+.service {
+  position: relative;
+}
+
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  min-width: 160px;
+}
+
+.service:hover .sub-dropdown-content {
+  display: block;
+}
+
+
